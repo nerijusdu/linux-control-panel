@@ -14,7 +14,14 @@ const BasicLayout : React.FC = ({ children }) => {
       <GridItem colSpan={2} bg="white" boxShadow="md" p="10px" zIndex="10">
         <NavBar />
       </GridItem>
-      <GridItem bg="white" boxShadow="4px 0px 6px -1px rgba(0, 0, 0, 0.1)" my="20px" rounded="2xl">
+      <GridItem
+        bg="white"
+        boxShadow="4px 0px 6px -1px rgba(0, 0, 0, 0.1)"
+        my="20px"
+        rounded="2xl"
+        border="1px"
+        borderColor="gray.100"
+      >
         <Sidebar />
       </GridItem>
       <GridItem p="20px">{children}</GridItem>

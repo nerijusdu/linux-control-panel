@@ -4,19 +4,33 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, extendTheme } from "@chakra-ui/react"
 import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
+const queryClient = new QueryClient()
 const theme = extendTheme({
   colors: {
     background: '#f8f8f8',
     main: '#922c88'
+  },
+  styles: {
+    global: {
+      body: {
+        color: '#3a3a3a'
+      }
+    }
   }
 });
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <ChakraProvider theme={theme}>
+          <App />
+        </ChakraProvider>
+      </Router>
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
