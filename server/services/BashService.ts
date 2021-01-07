@@ -39,7 +39,6 @@ class BashService {
       proc.stderr.on('data', data => error += data);
       proc.on('error', err => error += err);
       proc.on('exit', code => {
-        console.log('exiting with code ', code);
         if (code === 0) {
           resolve(result);
         }
