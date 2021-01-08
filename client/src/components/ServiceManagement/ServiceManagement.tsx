@@ -1,11 +1,15 @@
 import React from 'react';
-import { Box, Divider, Flex, Heading, Spinner, Table, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
+import { Box, Button, Divider, Flex, Heading, Spinner, Table, Tbody, Th, Thead, Tr } from '@chakra-ui/react';
 import { useQuery } from 'react-query';
 import api from '../../api';
 import { ListResponse, ServiceStatus } from '../../../../shared/models';
+import ServiceListRow from './ServiceListRow';
+import ReloadIcon from '../../icons/ReloadIcon';
 
 const ServiceManagement: React.FC = () => {
-  const { data, isLoading } = useQuery<ListResponse<ServiceStatus>>(api.services.keys.get, api.services.get);
+  const { data, isLoading, refetch } = useQuery<ListResponse<ServiceStatus>>(
+    api.services.keys.get,
+    api.services.get);
 
   return (
     <Box>
@@ -24,16 +28,26 @@ const ServiceManagement: React.FC = () => {
         </Thead>
         <Tbody>
           {data?.items.map(service => (
-            <Tr key={service.name}>
-              <Td>{service.name}</Td>
-              <Td color={service.enabled ? 'green.500' : 'red.500'}>
-                {service.enabled ? 'Running' : 'Stopped'}
-              </Td>
-              <Td></Td>
-            </Tr>
+            <ServiceListRow
+              key={service.name}
+              onAction={() => refetch()}
+              {...service}
+            />
           ))}
         </Tbody>
       </Table>
+      <Button
+        leftIcon={<ReloadIcon strokeWidth={3} />}
+        pos="fixed"
+        right="20px"
+        bottom="20px"
+        color="white"
+        bg="green.500"
+        onClick={() => refetch()}
+        isLoading={isLoading}
+      >
+        Refresh
+      </Button>
     </Box>
   );
 };

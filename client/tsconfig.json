@@ -21,7 +21,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src",
-    "../shared"
-  ]
+    "src"
+  ],
+  "extends": "./tsconfig.paths.json"
 }
