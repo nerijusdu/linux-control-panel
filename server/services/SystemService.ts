@@ -1,5 +1,5 @@
 import { autoInjectable, Lifecycle, scoped } from 'tsyringe';
-import { PowerAction } from '../../shared/models';
+import { PowerAction } from '../../shared';
 import BashService from './BashService';
 
 @autoInjectable()

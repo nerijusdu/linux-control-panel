@@ -2,14 +2,21 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
+    "moduleResolution": "node",
     "outDir": "./build",
     "esModuleInterop": true,
     "strict": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "baseUrl": ".",
     "rootDirs": [
-      "./",
+      ".",
       "../shared"
     ]
-  }
+  },
+  "references": [
+    {
+      "path": "../shared",
+    }
+  ]
 }

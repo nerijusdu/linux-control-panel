@@ -2,7 +2,7 @@ import express from 'express';
 import CommonController from './CommonController';
 import response from '../utils/response';
 import SystemService from '../services/SystemService';
-import { PowerActionRequest } from '../../shared/requests';
+import { PowerActionRequest } from '../../shared';
 
 class SystemController extends CommonController {
   private systemService: SystemService;

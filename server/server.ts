@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import 'reflect-metadata';
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -17,6 +18,8 @@ app.get('/health', (req, res) => {
 configureRoutes(app);
 
 app.use(errorMiddleware);
+
+app.use(express.static('public'));
 
 app.listen(port, () => {
   console.log(`LCP server listening on port ${port}`);

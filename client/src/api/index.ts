@@ -1,10 +1,11 @@
+import config from '../config';
 import HttpClient from './httpClient';
 import servicesApi, { servicesKeys } from './servicesApi';
 import systemApi, { systemKeys } from './systemApi';
 
 class ApiClient extends HttpClient {
   constructor() {
-    super('http://localhost:4200');
+    super(config().apiUrl);
   }
 
   get services() {

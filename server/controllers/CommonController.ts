@@ -8,7 +8,7 @@ abstract class CommonController {
   constructor(app: express.Application, name: string) {
     this.app = app;
     this.name = name;
-    this.baseRoute = `/${name.toLowerCase()}`;
+    this.baseRoute = `/api/${name.toLowerCase()}`;
   }
 
   getName() {
