@@ -1,6 +1,6 @@
 import { Icon, IconProps } from '@chakra-ui/react';
 
-const ReloadIcon : React.FC<IconProps> = (props) => {
+const PowerIcon : React.FC<IconProps> = (props) => {
   return (
     <Icon
       viewBox="0 0 24 24"
@@ -12,11 +12,10 @@ const ReloadIcon : React.FC<IconProps> = (props) => {
       strokeLinejoin="round"
       {...props}
     >
-      <polyline points="23 4 23 10 17 10"></polyline>
-      <polyline points="1 20 1 14 7 14"></polyline>
-      <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+      <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+      <line x1="12" y1="2" x2="12" y2="12"></line>
     </Icon>
   );
 };
 
-export default ReloadIcon;
+export default PowerIcon;

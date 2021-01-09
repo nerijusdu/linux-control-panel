@@ -1,6 +1,5 @@
 import { Box, Flex, Text, Link, Divider, IconProps } from '@chakra-ui/react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
-import React from 'react';
 import HomeIcon from '../icons/HomeIcon';
 import ServicesIcon from '../icons/ServicesIcon';
 

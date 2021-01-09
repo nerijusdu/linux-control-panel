@@ -1,8 +1,8 @@
-import React from 'react';
-import { Box, Button, Divider, Flex, Heading, Spinner, Table, Tbody, Th, Thead, Tr } from '@chakra-ui/react';
+import { Box, Divider, Flex, Heading, IconButton, Spinner, Table, Tbody, Th, Thead, Tr } from '@chakra-ui/react';
 import { useQuery } from 'react-query';
 import api from '../../api';
-import { ListResponse, ServiceStatus } from '../../../../shared/models';
+import { ServiceStatus } from '../../../../shared/models';
+import { ListResponse } from '../../../../shared/responses';
 import ServiceListRow from './ServiceListRow';
 import ReloadIcon from '../../icons/ReloadIcon';
 
@@ -36,8 +36,11 @@ const ServiceManagement: React.FC = () => {
           ))}
         </Tbody>
       </Table>
-      <Button
-        leftIcon={<ReloadIcon strokeWidth={3} />}
+      <IconButton
+        aria-label="Refresh"
+        title="Refresh"
+        icon={<ReloadIcon strokeWidth={3} boxSize={7} />}
+        size="lg"
         pos="fixed"
         right="20px"
         bottom="20px"
@@ -46,8 +49,7 @@ const ServiceManagement: React.FC = () => {
         onClick={() => refetch()}
         isLoading={isLoading}
       >
-        Refresh
-      </Button>
+      </IconButton>
     </Box>
   );
 };

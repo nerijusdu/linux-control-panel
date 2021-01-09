@@ -1,5 +1,4 @@
 import { Icon, IconProps } from '@chakra-ui/react';
-import React from 'react';
 
 const HomeIcon : React.FC<IconProps> = (props) => {
   return (

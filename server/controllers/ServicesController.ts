@@ -2,7 +2,7 @@ import CommonController from './CommonController';
 import express from 'express';
 import ServicesService from '../services/ServicesService';
 import response from '../utils/response';
-import { ServiceActionRequest } from '../models';
+import { ServiceActionRequest } from '../../shared/requests';
 
 class ServicesController extends CommonController {
   private servicesService: ServicesService;

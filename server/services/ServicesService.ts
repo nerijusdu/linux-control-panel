@@ -1,5 +1,5 @@
-import { autoInjectable, Lifecycle, scoped } from "tsyringe";
-import BashService from "./BashService";
+import { autoInjectable, Lifecycle, scoped } from 'tsyringe';
+import BashService from './BashService';
 import { ServiceAction, ServiceStatus } from '../../shared/models';
 
 const serviceRegex = /\s*\[\s{0,1}([+-])\s{0,1}\]\s*(.+)/;

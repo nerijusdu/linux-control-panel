@@ -1,7 +1,7 @@
 import { Tr, Td, Stack, Button } from '@chakra-ui/react';
-import React from 'react';
 import { useMutation } from 'react-query';
-import { ServiceAction, ServiceStatus, SuccessResponse } from '../../../../shared/models';
+import { ServiceAction, ServiceStatus } from '../../../../shared/models';
+import { SuccessResponse } from '../../../../shared/responses';
 import api from '../../api';
 import PlayIcon from '../../icons/PlayIcon';
 import ReloadIcon from '../../icons/ReloadIcon';

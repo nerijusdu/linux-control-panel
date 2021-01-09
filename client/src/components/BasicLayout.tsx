@@ -1,6 +1,5 @@
 import { Grid, GridItem } from '@chakra-ui/react';
-import React from 'react';
-import NavBar from './NavBar';
+import NavBar from './NavBar/NavBar';
 import Sidebar from './Sidebar';
 
 const BasicLayout : React.FC = ({ children }) => {

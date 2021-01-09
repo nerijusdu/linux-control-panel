@@ -1,4 +1,4 @@
-import { ServiceActionRequest } from "../../../shared/models";
+import { ServiceActionRequest } from "../../../shared/requests";
 import HttpClient from "./httpClient";
 
 const servicesApi = (client: HttpClient) => ({

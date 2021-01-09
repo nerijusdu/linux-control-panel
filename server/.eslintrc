@@ -17,6 +17,10 @@
     ],
     "semi": [
       "warn"
+    ],
+    "quotes": [
+      "warn",
+      "single"
     ]
   }
 }
