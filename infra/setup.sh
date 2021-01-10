@@ -1,8 +1,5 @@
 #!/bin/sh
 
-echo "-------------- Installing global dependencies --------------------------------"
-npm install -g typescript
-
 echo "-------------- Build client --------------------------------------------------"
 cd /var/www/lcp/client
 npm install --only=prod
