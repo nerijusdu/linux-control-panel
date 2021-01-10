@@ -19,4 +19,9 @@ echo "-------------- Copy client app to be served as static files from server --
 cd ..
 cp -a /var/www/lcp/client/build/. /var/www/lcp/server/public/
 
+echo "-------------- Setup as a service --------------------------------------------"
+cp /var/www/lcp/infra/lcp.service /etc/systemd/system
+systemctl start lcp
+systemctl enable lcp
+
 echo "-------------- Setup complete ------------------------------------------------"
